@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+<!-- Links for bootstrap, images for icons, and vanilla css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css"/>
+    <link rel="stylesheet" href="./Assets/style.css" />
+
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
+    <!-- Main header at top of screen -->
+    <header>
+        <div class="d-flex translate-middle bg-dark justify-content-center">
+            <h1 class="h1 text-light">Weather Dashboard</h1>
+        </div>
+    </header>
+
+<!-- Main Content -->
+<main class="m-4 p-4">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-3">
+                <!-- Search Bar Title -->
+                <h2 class="text-center">Search for a City</h2>
+                <!-- Search Bar -->
+                    <form id="search-form">
+                        <input type="search" class="form-control" id="city" placeholder="Please Enter City">
+                        <!-- Search Button -->
+                        <button type="submit" class="w-100 btn btn-info mt-2 mb-4">Enter</button>
+                    </form>
+                <!-- Serahc History below Search Bar -->
+                <ul id="search-history"></ul>
+            </div>
+
+            <!-- Current Day Weather -->
+            <div class="col-md-9">
+                <section class="pl-3 border border-dark">
+                        <div>
+                            <h2 id="city-name"></h2>
+                        </div>
+                            <h3 id="city-temp">Temperature: </h3>
+                            <h3 id="city-humid">Humditity: </h3>
+                            <h3 id="city-wind">Wind Speed: </h3>
+                </section>
+                <!-- Five Day Forecast -->
+                <section>
+                        <h2 class="text-center mb-5 mt-5">5-Day Forecast</h2>
+                    <div class="row justify-content-between" id="five-day">
+                        
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</main>
+
+</body>
+
+<!-- Links to jQuery, dayjs, and Javascript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.3/dayjs.min.js"></script>
+    <script src="./Develop/script.js"></script>   
+</html>
